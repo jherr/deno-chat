@@ -10,7 +10,7 @@ export default function Home() {
   const getMessages = useCallback(async () => {
     const res = await fetch("https://jherr-deno-chat-api.deno.dev/messages");
     const data = await res.json();
-    setMessages(await res.json());
+    setMessages(data);
   }, []);
 
   useEffect(() => {
